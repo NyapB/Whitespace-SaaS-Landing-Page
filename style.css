@@ -1,3 +1,15 @@
+:root {
+    /* primary colors */
+    --color-primary: #043873;
+    --color-primary: #4F9CF9;
+
+    /* secondary colors */
+    --color-secondary: #FFE492;
+    --color-secondary: #A7CEFC;
+    --color-secondary: #FFFFFF;
+    --color-secondary: #212529;
+}
+
 *{
     margin: 0;
     padding: 0;

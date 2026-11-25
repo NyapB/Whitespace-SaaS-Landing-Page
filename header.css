@@ -1,3 +1,16 @@
-header {
+.navbar {
+    background-color: navy;
+    width: 100%;
+    padding: 16px 32px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
     
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
 }
