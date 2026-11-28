@@ -55,7 +55,9 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 /* Positions your <img src="assets/images/Element line.png"> under "Together" */
@@ -67,6 +69,42 @@
   height: auto;
   z-index: -1;
   pointer-events: none;
+}
+
+.second-main-top button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.second-main-right button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .first-main-left button:hover {
@@ -207,22 +245,6 @@
   margin-bottom: 48px;
 }
 
-.second-main-top button {
-  background-color: var(--primary-blue);
-  color: var(--text-light);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 8px;
-  padding: 20px 36px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
 .second-main-top button:hover {
   opacity: 0.92;
   transform: translateY(-2px);
@@ -286,22 +308,6 @@
   line-height: 1.6;
   color: var(--text-dark);
   margin-bottom: 48px;
-}
-
-.second-main-right button {
-  background-color: var(--primary-blue);
-  color: var(--text-light);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 8px;
-  padding: 20px 36px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .second-main-right button:hover {
@@ -382,7 +388,7 @@
     height: auto;
     display: block;
     border-radius: 4px;
-}
+  }
 
   .second-main-top > div > div:last-child {
     justify-content: center;
@@ -460,7 +466,9 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .third-main > .third-main-right:first-child button:hover {
@@ -519,19 +527,19 @@
   }
 
   /* Yellow underline brush stroke placed beneath the bottom line of the heading */
-.fourth-main-right h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 310px;
-  height: 24px;
-  background-image: url("../assets/images/Element line.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-  pointer-events: none;
-}
+  .fourth-main-right h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 310px;
+    height: 24px;
+    background-image: url("../assets/images/Element line.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+  }
 
   .third-main > .third-main-right:first-child h2 {
     font-size: 36px;
@@ -544,15 +552,15 @@
   }
 
   .fourth-main-right h2 {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
 
   .third-main > .third-main-right:last-child {
     justify-content: center;
@@ -610,7 +618,9 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .fourth-main-right button:hover {
@@ -732,7 +742,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 /* LEFT CARD: FREE PLAN (WHITE + YELLOW BORDER) */
@@ -807,7 +819,9 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .fifth-main-left button:hover {
@@ -848,7 +862,8 @@
 
 /* Converts dark checkmark PNG to warm yellow on the dark navy card */
 .fifth-main-right-middle > div img {
-  filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(750%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(750%)
+    hue-rotate(345deg) brightness(103%) contrast(101%);
 }
 
 /* Featured card button */
@@ -864,7 +879,9 @@
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .fifth-main-right button:hover {
@@ -985,7 +1002,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 /* OUTER CARDS: FREE & ORGANIZATION (WHITE + YELLOW BORDER) */
@@ -1067,7 +1086,9 @@
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .fifth-main-left button:hover,
@@ -1094,7 +1115,8 @@
 
 /* Turns checkmark icons warm gold on the dark navy center card */
 .fifth-main-middle .fifth-main-right-middle > div img {
-  filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(750%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(750%)
+    hue-rotate(345deg) brightness(103%) contrast(101%);
 }
 
 /* Center card sky-blue button */
@@ -1110,7 +1132,9 @@
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .fifth-main-middle button:hover {
@@ -1171,4 +1195,3 @@
     width: 180px;
   }
 }
-
