@@ -1,19 +1,531 @@
-.first-main-container {
-    background-image: url("assets/images/Element3.png");
-    background-color: navy;
-    display: flex;
-    justify-content: space-between;
+/* =========================================
+   4. HERO SECTION (.first-main)
+   ========================================= */
+.first-main {
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+  padding: 100px 32px 140px;
+  width: 100%;
+  background-image: url("assets/images/Element3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+.first-main-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* Left Column: Heading, Paragraph, CTA */
 .first-main-left {
+  flex: 1;
+  max-width: 650px;
+}
+
+.first-main-left h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-transform: none; /* Keeps casing clean; change to uppercase if preferred */
+}
+
+.first-main-left p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 48px;
+}
+
+.first-main-left button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 32px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.first-main-left button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Image Container */
+.first-main-right {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.first-main-right img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/*RESPONSIVE HERO (TABLET & MOBILE)*/
+@media (max-width: 1024px) {
+  .first-main {
+    padding: 80px 32px 100px;
+  }
+
+  .first-main-left h2 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 860px) {
+  .first-main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .first-main-left {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .first-main-left h2 {
+    font-size: 36px;
+  }
+
+  .first-main-right {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.first-main-left h2{
-    text-decoration-color: white;
+/* =========================================
+   PROJECT MANAGEMENT & WORK TOGETHER (.second-main)
+   ========================================= */
+.second-main {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 120px 32px;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Prevents the decorative background circle from causing horizontal scroll */
 }
 
-.first-main-right img{
-    width: 400px;
+/* Faint decorative background wave/circle on the left */
+.second-main > img {
+  position: absolute;
+  top: 60px;
+  left: -120px;
+  width: 480px;
+  height: auto;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Shared container sizing for top and bottom rows */
+.second-main-top,
+.second-main-bottom {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- TOP SUBSECTION: PROJECT MANAGEMENT --- */
+.second-main-top {
+  margin-bottom: 120px;
+}
+
+/* Inner wrapper div inside .second-main-top */
+.second-main-top > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* Left text column */
+.second-main-top > div > div:first-child {
+  flex: 1;
+  max-width: 640px;
+}
+
+.second-main-top h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-transform: capitalize; /* Turns "PROJECT MANAGEMENT" into "Project Management" */
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Yellow underline brush stroke under "Management" */
+.second-main-top h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 340px;
+  height: 24px;
+  background-image: url("../assets/images/Element line.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.second-main-top p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.second-main-top button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.second-main-top button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Right image column */
+.second-main-top > div > div:last-child {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.second-main-top > div > div:last-child img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* --- BOTTOM SUBSECTION: WORK TOGETHER --- */
+.second-main-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+/* Left circular orbit diagram */
+.second-main-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.second-main-left img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  display: block;
+}
+
+/* Right text & yellow brush stroke column */
+.second-main-right {
+  flex: 1;
+  max-width: 620px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Positions your <img src="assets/images/Element line.png"> under "Together" */
+.second-main-right > img {
+  position: absolute;
+  top: 48px;
+  left: 145px;
+  width: 260px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.second-main-right h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.second-main-right p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.second-main-right button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.second-main-right button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/*RESPONSIVE .second-main (TABLET & MOBILE)*/
+@media (max-width: 1024px) {
+  .second-main {
+    padding: 90px 32px;
+  }
+
+  .second-main-top h2,
+  .second-main-right h2 {
+    font-size: 44px;
+  }
+
+  .second-main-top h2::after {
+    width: 260px;
+    height: 18px;
+  }
+
+  .second-main-right > img {
+    top: 38px;
+    left: 115px;
+    width: 210px;
+  }
+}
+
+@media (max-width: 860px) {
+  .second-main-top {
+    margin-bottom: 80px;
+  }
+
+  .second-main-top > div,
+  .second-main-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+
+  /* Places the orbit image below the text on mobile, or remove if you prefer image first */
+  .second-main-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .second-main-top > div > div:first-child,
+  .second-main-right {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-main-top h2,
+  .second-main-right h2 {
+    font-size: 36px;
+  }
+
+  .second-main-top h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 210px;
+    height: 15px;
+  }
+
+  .second-main-right > img {
+    top: 32px;
+    left: 50%;
+    transform: translateX(-15%);
+    width: 170px;
+  }
+
+  .second-main-top > div > div:last-child {
+    justify-content: center;
+  }
+}
+
+
+/*USE AS EXTENSION SECTION (.third-main)*/
+.third-main {
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+  padding: 120px 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centers content to match --container-max */
+.third-main > .third-main-right:first-child,
+.third-main > .third-main-right:last-child {
+  max-width: calc(var(--container-max) / 2);
+}
+
+/* Left Column: Text & CTA */
+.third-main > .third-main-right:first-child {
+  flex: 1;
+  padding-right: 48px;
+}
+
+.third-main > .third-main-right:first-child h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Yellow underline brush stroke placed via CSS background-image */
+.third-main > .third-main-right:first-child h2::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  width: 280px;
+  height: 24px;
+  background-image: url("../assets/images/Element line.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.third-main > .third-main-right:first-child p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 48px;
+}
+
+.third-main > .third-main-right:first-child button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.third-main > .third-main-right:first-child button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Image Container */
+.third-main > .third-main-right:last-child {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.third-main > .third-main-right:last-child img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* RESPONSIVE EXTENSION SECTION*/
+@media (max-width: 1024px) {
+  .third-main {
+    padding: 90px 32px;
+  }
+
+  .third-main > .third-main-right:first-child h2 {
+    font-size: 44px;
+  }
+
+  .third-main > .third-main-right:first-child h2::after {
+    width: 220px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 860px) {
+  .third-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .third-main > .third-main-right:first-child,
+  .third-main > .third-main-right:last-child {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .third-main > .third-main-right:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .third-main > .third-main-right:first-child h2 {
+    font-size: 36px;
+  }
+
+  .third-main > .third-main-right:first-child h2::after {
+    width: 180px;
+    height: 15px;
+    right: -4px;
+  }
+
+  .third-main > .third-main-right:last-child {
+    justify-content: center;
+  }
 }
