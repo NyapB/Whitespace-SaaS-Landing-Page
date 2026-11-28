@@ -1,6 +1,4 @@
-/* =========================================
-   4. HERO SECTION (.first-main)
-   ========================================= */
+/* HERO SECTION (.first-main) */
 .first-main {
   background-color: var(--primary-navy);
   color: var(--text-light);
@@ -40,7 +38,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255 255 255 / 90%);
   margin-bottom: 48px;
 }
 
@@ -80,7 +78,7 @@
   border-radius: 4px;
 }
 
-/*RESPONSIVE HERO (TABLET & MOBILE)*/
+/* RESPONSIVE HERO (TABLET & MOBILE) */
 @media (max-width: 1024px) {
   .first-main {
     padding: 80px 32px 100px;
@@ -114,9 +112,7 @@
   }
 }
 
-/* =========================================
-   PROJECT MANAGEMENT & WORK TOGETHER (.second-main)
-   ========================================= */
+/*.second-main */
 .second-main {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -147,7 +143,7 @@
   z-index: 1;
 }
 
-/* --- TOP SUBSECTION: PROJECT MANAGEMENT --- */
+/* TOP SUBSECTION: PROJECT MANAGEMENT */
 .second-main-top {
   margin-bottom: 120px;
 }
@@ -236,7 +232,7 @@
   border-radius: 4px;
 }
 
-/* --- BOTTOM SUBSECTION: WORK TOGETHER --- */
+/* BOTTOM SUBSECTION: WORK TOGETHER */
 .second-main-bottom {
   display: flex;
   align-items: center;
@@ -313,7 +309,7 @@
   transform: translateY(-2px);
 }
 
-/*RESPONSIVE .second-main (TABLET & MOBILE)*/
+/* RESPONSIVE .second-main (TABLET & MOBILE) */
 @media (max-width: 1024px) {
   .second-main {
     padding: 90px 32px;
@@ -386,7 +382,7 @@
 }
 
 
-/*USE AS EXTENSION SECTION (.third-main)*/
+/* USE AS EXTENSION SECTION (.third-main) */
 .third-main {
   background-color: var(--primary-navy);
   color: var(--text-light);
@@ -480,7 +476,7 @@
   border-radius: 4px;
 }
 
-/* RESPONSIVE EXTENSION SECTION*/
+/* RESPONSIVE EXTENSION SECTION */
 @media (max-width: 1024px) {
   .third-main {
     padding: 90px 32px;
@@ -530,9 +526,7 @@
   }
 }
 
-/* =========================================
-   CUSTOMISE TO YOUR NEEDS SECTION (.fourth-main)
-   ========================================= */
+/* .fourth-main */
 .fourth-main {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -625,8 +619,7 @@
   transform: translateY(-2px);
 }
 
-/*
-   RESPONSIVE .fourth-main (TABLET & MOBILE)*/
+/* RESPONSIVE .fourth-main (TABLET & MOBILE) */
 @media (max-width: 1024px) {
   .fourth-main {
     padding: 90px 32px;
@@ -677,7 +670,7 @@
   }
 }
 
-/*.fifth-main*/
+/* .fifth-main */
 .fifth-main {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -685,7 +678,7 @@
   width: 100%;
 }
 
-/* --- TOP HEADER AREA --- */
+/* TOP HEADER AREA */
 .fifth-main-top {
   max-width: 820px;
   margin: 0 auto 72px;
@@ -720,7 +713,7 @@
   color: var(--text-dark);
 }
 
-/* --- PRICING CARDS CONTAINER --- */
+/* PRICING CARDS CONTAINER */
 .fifth-main-bottom {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -743,7 +736,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* --- LEFT CARD: FREE PLAN (WHITE + YELLOW BORDER) --- */
+/* LEFT CARD: FREE PLAN (WHITE + YELLOW BORDER) */
 .fifth-main-left {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -823,12 +816,12 @@
   transform: translateY(-1px);
 }
 
-/* --- RIGHT / FEATURED CARD: PERSONAL PLAN (DARK NAVY) --- */
+/* RIGHT / FEATURED CARD: PERSONAL PLAN (DARK NAVY) */
 .fifth-main-right {
   background-color: var(--primary-navy);
   color: var(--text-light);
   padding: 64px 44px; /* Taller vertical padding to match elevated center card */
-  box-shadow: 0 16px 40px rgba(4, 56, 115, 0.2);
+  box-shadow: 0 16px 40px rgba(4 56 115 / 20%);
 }
 
 .fifth-main-right:hover {
@@ -996,7 +989,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* --- OUTER CARDS: FREE & ORGANIZATION (WHITE + YELLOW BORDER) --- */
+/* OUTER CARDS: FREE & ORGANIZATION (WHITE + YELLOW BORDER) */
 .fifth-main-left,
 .fifth-main-right {
   background-color: var(--bg-white);
@@ -1084,7 +1077,7 @@
   transform: translateY(-1px);
 }
 
-/* --- CENTER FEATURED CARD: PERSONAL PLAN (DARK NAVY) --- */
+/* CENTER FEATURED CARD: PERSONAL PLAN (DARK NAVY) */
 .fifth-main-middle {
   background-color: var(--primary-navy);
   color: var(--text-light);
@@ -1126,7 +1119,7 @@
   transform: translateY(-1px);
 }
 
-/*RESPONSIVE 3-CARD PRICING (TABLET & MOBILE)*/
+/* RESPONSIVE 3-CARD PRICING (TABLET & MOBILE) */
 @media (max-width: 1120px) {
   .fifth-main-bottom {
     gap: 20px;
