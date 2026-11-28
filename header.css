@@ -118,9 +118,7 @@
   pointer-events: none; /* Lets clicks pass through to the button */
 }
 
-/* =========================================
-   3. RESPONSIVE NAVBAR (TABLET & MOBILE)
-   ========================================= */
+/* RESPONSIVE NAVBAR (TABLET & MOBILE) */
 @media (max-width: 1024px) {
   .nav-right {
     gap: 24px;
