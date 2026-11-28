@@ -1,0 +1,34 @@
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+  /* Brand Colors */
+  --primary-navy: #043873;
+  --primary-blue: #4f9cf9;
+  --secondary-yellow: #ffe492;
+  --secondary-sky: #a7cefc;
+  
+  /* Neutral Colors */
+  --text-dark: #212529;
+  --text-light: #ffffff;
+  --bg-white: #ffffff;
+
+  /* Spacing & Layout */
+  --container-max: 1480px;
+  --section-padding: 100px 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+}
+
+
