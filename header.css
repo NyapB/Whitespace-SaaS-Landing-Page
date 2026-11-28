@@ -1,4 +1,4 @@
-/* NAVBAR SECTION*/
+/* NAVBAR SECTION */
 .navbar {
   background-color: var(--primary-navy);
   color: var(--text-light);
@@ -60,8 +60,8 @@
   display: inline-block;
   width: 6px;
   height: 6px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
+  border-right: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
   transform: rotate(45deg);
   margin-top: -3px;
 }
