@@ -529,3 +529,151 @@
     justify-content: center;
   }
 }
+
+/* =========================================
+   CUSTOMISE TO YOUR NEEDS SECTION (.fourth-main)
+   ========================================= */
+.fourth-main {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 120px 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+/* Centers content to match --container-max without needing an extra wrapper div */
+.fourth-main-left,
+.fourth-main-right {
+  max-width: calc((var(--container-max) - 64px) / 2);
+}
+
+/* Left Column: Image Container */
+.fourth-main-left {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fourth-main-left img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Right Column: Text, Yellow Brush Stroke & CTA */
+.fourth-main-right {
+  flex: 1;
+}
+
+.fourth-main-right h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Yellow underline brush stroke placed beneath the bottom line of the heading */
+.fourth-main-right h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 310px;
+  height: 24px;
+  background-image: url("../assets/images/Element line.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.fourth-main-right p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+}
+
+.fourth-main-right button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fourth-main-right button:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVE .fourth-main (TABLET & MOBILE)
+   ========================================= */
+@media (max-width: 1024px) {
+  .fourth-main {
+    padding: 90px 32px;
+    gap: 40px;
+  }
+
+  .fourth-main-right h2 {
+    font-size: 44px;
+  }
+
+  .fourth-main-right h2::after {
+    width: 240px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 860px) {
+  .fourth-main {
+    flex-direction: column-reverse; /* Puts text above image on mobile; change to 'column' if you want image first */
+    text-align: center;
+    gap: 48px;
+  }
+
+  .fourth-main-left,
+  .fourth-main-right {
+    max-width: 100%;
+  }
+
+  .fourth-main-left {
+    justify-content: center;
+  }
+
+  .fourth-main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fourth-main-right h2 {
+    font-size: 36px;
+  }
+
+  .fourth-main-right h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 15px;
+  }
+}
