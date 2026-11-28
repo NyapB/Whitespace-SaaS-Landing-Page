@@ -58,6 +58,17 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* Positions your <img src="assets/images/Element line.png"> under "Together" */
+.second-main-right > img {
+  position: absolute;
+  top: 48px;
+  left: 145px;
+  width: 260px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .first-main-left button:hover {
   opacity: 0.92;
   transform: translateY(-2px);
@@ -112,7 +123,7 @@
   }
 }
 
-/*.second-main */
+/* .second-main */
 .second-main {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -224,6 +235,13 @@
   justify-content: flex-end;
 }
 
+.second-main-left img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  display: block;
+}
+
 .second-main-top > div > div:last-child img {
   width: 100%;
   max-width: 680px;
@@ -247,30 +265,12 @@
   justify-content: center;
 }
 
-.second-main-left img {
-  width: 100%;
-  max-width: 580px;
-  height: auto;
-  display: block;
-}
-
 /* Right text & yellow brush stroke column */
 .second-main-right {
   flex: 1;
   max-width: 620px;
   position: relative;
   z-index: 1;
-}
-
-/* Positions your <img src="assets/images/Element line.png"> under "Together" */
-.second-main-right > img {
-  position: absolute;
-  top: 48px;
-  left: 145px;
-  width: 260px;
-  height: auto;
-  z-index: -1;
-  pointer-events: none;
 }
 
 .second-main-right h2 {
@@ -377,11 +377,11 @@
   }
 
   .fourth-main-left img {
-  width: 100%;
-  max-width: 680px;
-  height: auto;
-  display: block;
-  border-radius: 4px;
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
 }
 
   .second-main-top > div > div:last-child {
