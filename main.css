@@ -930,7 +930,7 @@
   }
 }
 
-/*.fifth-main*/
+/*CHOOSE YOUR PLAN SECTION (.fifth-main - 3 CARDS)*/
 .fifth-main {
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -983,11 +983,11 @@
   gap: 32px;
 }
 
-/* Shared card base styling */
+/* Shared base styling for all 3 cards */
 .fifth-main-left,
+.fifth-main-middle,
 .fifth-main-right {
   flex: 1;
-  max-width: 470px;
   border-radius: 10px;
   padding: 40px 44px;
   display: flex;
@@ -996,37 +996,42 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* --- LEFT CARD: FREE PLAN (WHITE + YELLOW BORDER) --- */
-.fifth-main-left {
+/* --- OUTER CARDS: FREE & ORGANIZATION (WHITE + YELLOW BORDER) --- */
+.fifth-main-left,
+.fifth-main-right {
   background-color: var(--bg-white);
   color: var(--text-dark);
   border: 1px solid var(--secondary-yellow);
 }
 
-.fifth-main-left:hover {
+.fifth-main-left:hover,
+.fifth-main-right:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
 }
 
-.left-top h4 {
+.left-top h4,
+.fifth-main-right-top h4 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-.left-top h2 {
+.left-top h2,
+.fifth-main-right-top h2 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
-.left-top p {
+.left-top p,
+.fifth-main-right-top p {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 28px;
 }
 
-/* Feature checklist */
+/* Feature checklist shared across all 3 cards */
 .left-middle,
 .fifth-main-right-middle {
   display: flex;
@@ -1056,8 +1061,9 @@
   line-height: 1.5;
 }
 
-/* Free card button */
-.fifth-main-left button {
+/* Outer cards button */
+.fifth-main-left button,
+.fifth-main-right button {
   align-self: flex-start;
   background-color: var(--bg-white);
   color: var(--text-dark);
@@ -1067,53 +1073,40 @@
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
+  text-transform: capitalize;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.fifth-main-left button:hover {
+.fifth-main-left button:hover,
+.fifth-main-right button:hover {
   background-color: #fff9e6;
   transform: translateY(-1px);
 }
 
-/* --- RIGHT / FEATURED CARD: PERSONAL PLAN (DARK NAVY) --- */
-.fifth-main-right {
+/* --- CENTER FEATURED CARD: PERSONAL PLAN (DARK NAVY) --- */
+.fifth-main-middle {
   background-color: var(--primary-navy);
   color: var(--text-light);
-  padding: 64px 44px; /* Taller vertical padding to match elevated center card */
+  padding: 72px 44px; /* Extra vertical height so the center card stands out */
   box-shadow: 0 16px 40px rgba(4, 56, 115, 0.2);
 }
 
-.fifth-main-right:hover {
+.fifth-main-middle:hover {
   transform: translateY(-4px);
 }
 
-.fifth-main-right-top h4 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.fifth-main-right-top h2 {
-  font-size: 36px;
-  font-weight: 700;
+.fifth-main-middle .fifth-main-right-top h2 {
   color: var(--secondary-yellow);
-  margin-bottom: 16px;
 }
 
-.fifth-main-right-top p {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-
-/* Converts dark checkmark PNG to warm yellow on the dark navy card */
-.fifth-main-right-middle > div img {
+/* Turns checkmark icons warm gold on the dark navy center card */
+.fifth-main-middle .fifth-main-right-middle > div img {
   filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(750%) hue-rotate(345deg) brightness(103%) contrast(101%);
 }
 
-/* Featured card button */
-.fifth-main-right button {
+/* Center card sky-blue button */
+.fifth-main-middle button {
   align-self: flex-start;
   background-color: var(--primary-blue);
   color: var(--text-light);
@@ -1128,13 +1121,28 @@
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.fifth-main-right button:hover {
+.fifth-main-middle button:hover {
   opacity: 0.92;
   transform: translateY(-1px);
 }
 
-/*RESPONSIVE PRICING SECTION (TABLET & MOBILE)*/
-@media (max-width: 1024px) {
+/*RESPONSIVE 3-CARD PRICING (TABLET & MOBILE)*/
+@media (max-width: 1120px) {
+  .fifth-main-bottom {
+    gap: 20px;
+  }
+
+  .fifth-main-left,
+  .fifth-main-right {
+    padding: 36px 24px;
+  }
+
+  .fifth-main-middle {
+    padding: 56px 24px;
+  }
+}
+
+@media (max-width: 960px) {
   .fifth-main {
     padding: 90px 32px;
   }
@@ -1149,20 +1157,19 @@
   }
 
   .fifth-main-bottom {
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .fifth-main-left,
+  .fifth-main-middle,
   .fifth-main-right {
-    padding: 36px 28px;
-  }
-
-  .fifth-main-right {
-    padding: 48px 28px;
+    width: 100%;
+    max-width: 520px;
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 600px) {
   .fifth-main-top h2 {
     font-size: 36px;
   }
@@ -1171,14 +1178,5 @@
     top: 32px;
     width: 180px;
   }
-
-  .fifth-main-bottom {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .fifth-main-left,
-  .fifth-main-right {
-    max-width: 100%;
-  }
 }
+
