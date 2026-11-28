@@ -1,0 +1,19 @@
+.first-main-container {
+    background-image: url("assets/images/Element3.png");
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-main-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-main-left h2{
+    text-decoration-color: white;
+}
+
+.first-main-right img{
+    width: 400px;
+}

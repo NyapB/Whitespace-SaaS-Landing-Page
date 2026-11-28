@@ -1,16 +1,152 @@
+/* NAVBAR SECTION*/
 .navbar {
-    background-color: navy;
-    width: 100%;
-    padding: 16px 32px;
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+  padding: 16px 32px;
+  width: 100%;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: center;
-    
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.header-nav {
-    display: flex;
-    justify-content: space-between;
+/* Logo link */
+.nav-container > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-container > a img {
+  width: 140px; /* Overrides width="100px" to match design scale */
+  height: auto;
+  display: block;
+}
+
+/* Right side wrapper (Links + Buttons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Navigation links */
+.nav-right nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-right nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+/* Pure CSS dropdown chevron next to nav links */
+.nav-right nav a::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+
+.nav-right nav a:hover {
+  color: var(--secondary-yellow);
+}
+
+/* Button group wrapper */
+.nav-right > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Shared button styling */
+.nav-right > div button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-right > div button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* First button ("Login" / "Logo") - Yellow */
+.nav-right > div button:first-of-type {
+  background-color: var(--secondary-yellow);
+  color: var(--primary-navy);
+  padding: 16px 36px;
+}
+
+/* Second button ("Try Whitespace free") - Sky Blue */
+.nav-right > div button:last-of-type {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  padding-right: 46px; /* Extra space on right for the arrow icon */
+}
+
+/* Arrow icon positioned neatly inside the right side of the blue button */
+.nav-right > div img {
+  width: 14px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  pointer-events: none; /* Lets clicks pass through to the button */
+}
+
+/* =========================================
+   3. RESPONSIVE NAVBAR (TABLET & MOBILE)
+   ========================================= */
+@media (max-width: 1024px) {
+  .nav-right {
+    gap: 24px;
+  }
+
+  .nav-right nav {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 16px;
+  }
+
+  .nav-right nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
 }
